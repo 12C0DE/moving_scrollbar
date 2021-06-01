@@ -1,0 +1,31 @@
+#truck {
+    left: 4%;
+    content: url(img/truck_WO_boxes.svg);
+    padding-bottom: 2px;
+}
+
+#houseDiv {
+    right: 0.5%;
+    content: url(img/003-living.svg);
+    padding-bottom: 2px;
+}
+
+#boxTruck {
+    left: 2%;
+    content: url(img/001-truck.svg);
+}
+
+.foot {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
+    z-index: 3;
+    height: 8vh;
+    position: fixed;
+    bottom: 0%;
+}
+
+body {
+    position: relative;
+    padding-bottom: 30px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <link href='style/style.css' rel='stylesheet' />
+  <script src='Scripts/jquery-3.0.0.slim.min.js'></script>
+  <title>Testing scrollBar</title>
+  <script>
+    $(document).ready(function () {
+
+      $('#truck').hide();
+      $('#houseDiv').hide();
+
+      var $movingDiv = $('#truck');
+
+      $(window).scroll(function () {
+        var scrollAmount = amountScrolled();
+        var newPos = ($(window).width() * scrollAmount) / 110;
+
+        if (scrollAmount <= 3) {
+
+          $('#truck').hide();
+          $('#houseDiv').hide();
+          $('#boxTruck').show();
+        } else if (scrollAmount >= 99) {
+
+          $('#truck').hide();
+          $('#boxTruck').hide();
+          $('#houseDiv').show();
+        } else {
+
+          $movingDiv.css({
+            'left': newPos,
+          });
+
+          $('#houseDiv').hide();
+          $('#boxTruck').hide();
+          $('#truck').show();
+        }
+      });
+    });
+
+    function amountScrolled() {
+      var winheight = $(window).height();
+      var docheight = $(document).height();
+      var scrollTop = $(window).scrollTop();
+      var trackLength = docheight - winheight;
+      var pctScrolled = scrollTop/trackLength * 100;
+
+      return pctScrolled;
+    }
+  </script>
+</head>
+<body style='font-size: large; height:500vh'>
+  <div style='height: 200vh'>
+      <p>
+        orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electr
+      </p>
+  </div>
+<div class='foot' id='boxTruck'></div>
+<div class='foot' id='truck'></div>
+<div class='foot' id='houseDiv'></div>
+</body>
+</html>

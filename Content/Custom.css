@@ -1,0 +1,81 @@
+body {
+    background-color: #C5ffbb;
+}
+
+.head {
+    background-position: center;
+    position: relative;
+    height: 100vh;
+}
+
+.darkGradientBtm {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 0px;
+    background: linear-gradient(180deg, rgba(18, 16, 16, 0) 0%, rgba(18, 16, 16, 0.6966) 72.4%, rgba(18, 16, 16, 0.81) 99.97%, rgba(18, 16, 16, 0.81) 99.98%);
+    z-index: 5;
+
+}
+
+.logo {
+    background-image: url(Images/SharkFin_VR_YlwGrn.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.jungle {
+    background-image: url(Images/landscape_Jungle.svg);
+    background-repeat: no-repeat;
+    z-index: 3;
+    width: 100vw;
+    height: 100%;
+    bottom: 0px;
+    background-position: bottom;
+    /* filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='Images/landscape_Jungle.svg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='Images/landscape_Jungle.svg', sizingMethod='scale')";
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    webkit-backgroun
+    background-size: cover; */
+}
+
+#dropdownMenuButton {
+    padding: 3px 30px;
+    font-size: 1.75em;
+    position: absolute;
+    float: left;
+    top: 5px;
+    margin-left: 10px;
+    background-color: black;
+}
+
+#buildBtn {
+    padding: 3px 30px;
+    font-size: 1.75em;
+    position: absolute;
+    float: left;
+    top: 5px;
+    margin-left: 175px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+#popDiv {
+    position: absolute;
+    top: 75px;
+    left: 175px;
+    z-index: 9;
+}
+
+#webSvcTitle {
+    font-size: 1.2em;
+    padding: 10px 15px;
+    font-weight: lighter;
+    margin-left: 3px;
+    padding-right: 350px;
+}
